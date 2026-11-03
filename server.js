@@ -15,6 +15,7 @@ const passUserToView = require("./middleware/pass-user-to-view.js");
 // routes Imports
 const authController = require("./routes/auth.routes.js");
 const indexController = require("./routes/index.routes.js");
+const componentController = require("./routes/componnent.routes.js");
 
 
 // Middleware
@@ -39,26 +40,15 @@ app.use(
     }
   })
 );
-app.get('/welcome', (req, res) => {
-  res.render('welcome.ejs');
-});
+
 app.use(passUserToView)
-
-
-
-
-
-
-
 
 
 
 // Routes go here
 app.use('/auth',authController)
+app.use('/components', componentController)
 app.use('/',indexController)
-
-
-
 
 
 // connect to database and listen on Port 3000
