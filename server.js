@@ -39,6 +39,9 @@ app.use(
     }
   })
 );
+app.get('/welcome', (req, res) => {
+  res.render('welcome.ejs');
+});
 app.use(passUserToView)
 
 

@@ -17,6 +17,7 @@ async function seedComponents() {
         { componentname: "Corsair Vengeance LPX 16GB (2 x 8GB) DDR4-3200", category: "RAM", brand: "Corsair", price: 89.99 },
         { componentname: "G.Skill Trident Z RGB 32GB (2 x 16GB) DDR4-3600", category: "RAM", brand: "G.Skill", price: 179.99 },
         { componentname: "Samsung 970 EVO Plus 1TB NVMe SSD", category: "Storage", brand: "Samsung", price: 149.99 },]
+        
 
     try {
         await Component.insertMany(components);
