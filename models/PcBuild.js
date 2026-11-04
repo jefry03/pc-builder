@@ -11,7 +11,7 @@ const pcBuildSchema = new mongoose.Schema({
     },
     components: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Component"
+        ref: "Componnent"
     }]
      , totalPrice: {
         type: Number,

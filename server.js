@@ -18,6 +18,7 @@ const indexController = require("./routes/index.routes.js");
 const componentController = require("./routes/componnent.routes.js");
 
 
+
 // Middleware
 app.use(express.static('public')) // my app will serve all static files from public folder
 app.use(express.urlencoded({ extended: false }));

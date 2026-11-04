@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const componentSchema = new mongoose.Schema({
- componentname : {
+const componnentSchema = new mongoose.Schema({
+ componnentname : {
     type: String,
     required: true,
  }
@@ -22,10 +22,10 @@ price : {
 } ,
 }, { timestamps: true });
 
-const Component = mongoose.model("Component", componentSchema);
+const Componnent = mongoose.model("Componnent", componnentSchema);
 
 
 
 
 
-module.exports = Component;
+module.exports = Componnent;

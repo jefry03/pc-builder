@@ -1,45 +1,46 @@
 const router = require("express").Router()
+const Componnent = require('../models/Componnent.js')
 const isSignedIn = require('../middleware/is-signed-in')
-const Component = require('../models/componnent')
+
 
 // Create routes
 
 router.get('/', isSignedIn, async (req, res) => {
-    const allComponents = await Component.find();
+    const allComponnents = await Componnent.find();
 
-    const cpuComponents = allComponents.filter((component) => {
-        return component.category === "CPU";
+    const cpuComponnents = allComponnents.filter((Componnent) => {
+        return Componnent.category === "CPU";
     });
-    const gpuComponents = allComponents.filter((component) => {
-    return component.category === "GPU";
+    const gpuComponnents = allComponnents.filter((Componnent) => {
+    return Componnent.category === "GPU";
 });
 
-const ramComponents = allComponents.filter((component) => {
-    return component.category === "RAM";
+const ramComponnents = allComponnents.filter((Componnent) => {
+    return Componnent.category === "RAM";
 });
 
-const storageComponents = allComponents.filter((component) => {
-    return component.category === "Storage";
+const storageComponnents = allComponnents.filter((Componnent) => {
+    return Componnent.category === "Storage";
 });
 
-const powerSupplyComponents = allComponents.filter((component) => {
-    return component.category === "powerSupply";
+const powerSupplyComponnents = allComponnents.filter((Componnent) => {
+    return Componnent.category === "powerSupply";
 });
-const caseComponents = allComponents.filter((component) => {
-    return component.category === "case";
+const caseComponnents = allComponnents.filter((Componnent) => {
+    return Componnent.category === "case";
 });
-const motherboardComponents = allComponents.filter((component) => {
-    return component.category === "MOTHERBOARD";
+const motherboardComponnents = allComponnents.filter((Componnent) => {
+    return Componnent.category === "MOTHERBOARD";
 });
 
-    res.render('components.ejs', {
-        cpuComponents,
-        gpuComponents,
-        ramComponents,
-        storageComponents,
-        powerSupplyComponents,
-        caseComponents ,
-        motherboardComponents
+res.render('componnent.ejs', {
+        cpuComponents: cpuComponnents,
+        gpuComponents: gpuComponnents,
+        ramComponents: ramComponnents,
+        storageComponents: storageComponnents,
+        powerSupplyComponents: powerSupplyComponnents,
+        caseComponents: caseComponnents,
+        motherboardComponents: motherboardComponnents
     });
 
 });
