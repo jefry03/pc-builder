@@ -18,7 +18,8 @@ async function seedComponents() {
         { componentname: "G.Skill Trident Z RGB 32GB (2 x 16GB) DDR4-3600", category: "RAM", brand: "G.Skill", price: 179.99 },
         { componentname: "Samsung 970 EVO Plus 1TB NVMe SSD", category: "Storage", brand: "Samsung", price: 149.99 },
         {componentname: "Western Digital Blue 1TB HDD", category: "powerSupply", brand: "Western Digital", price: 49.99 },
-        {componentname: "Western Digital Blue 1TB HDD", category: "case", brand: "Western Digital", price: 49.99 }
+        {componentname: "Western Digital Blue 1TB HDD", category: "case", brand: "Western Digital", price: 49.99 } ,
+        {componentname: "Western Digital Blue 1TB HDD", category: "MOTHERBOARD", brand: "Western Digital", price: 49.99 }
     ];
 
     const cpuComponents = components.filter((component) => {

@@ -6,21 +6,89 @@
     <title>Document</title>
 </head>
 <body>
-     <%- include('./partials/navbar') %>
-    <h1>Creat your dream pc</h1>
-   <form>
-  <label for="fname">PC BUILDS NAME </label><br>
-  <input type="text" id="fname" name="fname"><br>
-</form>
-    <label>
-     <select name="components" id="components">
-        <option value="cpu">CPU</option>
-        <option value="gpu">GPU</option>
-        <option value="ram">RAM</option>
-        <option value="storage">Storage</option>
-        <option value="motherboard">Motherboard</option>
-        <option value="case">Case</option> 
-    </label>
-   
+    <%- include('./partials/navbar') %>
+        <h1>Creat your dream pc</h1>
+        <form>
+            <label for="fname">PC BUILDS NAME </label><br>
+            <input type="text" id="fname" name="fname"><br>
+        </form>
+
+        <div class="pc-builds">
+        <form action="/pc-builds" method="POST">
+                <label for="cpu">Processor (CPU):</label>
+                <select name="cpu" id="cpu" required>
+                    <% cpuComponents.forEach(component=> { %>
+                        <option value="<%= component._id %>"><%= component.componentname %></option>
+                    <% }) %>
+                </select>
+        </form>
+        </div>
+         <div class="pc-builds">
+        <form action="/pc-builds" method="POST">
+                <label for="gpu"> Graphics Processing Unit (GPU):</label>
+                <select name="gpu" id="gpu" required>
+                    <% gpuComponents.forEach(component=> { %>
+                        <option value="<%= component._id %>"><%= component.componentname %></option>
+                    <% }) %>
+                </select>
+        </form>
+        </div>
+        <form action="/pc-builds" method="POST">
+                <label for="RAM"> Random Access Memory (RAM):</label>
+                <select name="RAM" id="RAM" required>
+                    <% ramComponents.forEach(component=> { %>
+                        <option value="<%= component._id %>"><%= component.componentname %></option>
+                    <% }) %>
+                </select>
+        </form>
+        </div>
+
+         <div class="pc-builds">
+        <form action="/pc-builds" method="POST">
+                <label for="motherboard">MOTHER BOARD:</label>
+                <select name="motherboard" id="motherboard" required>
+                    <% motherboardComponents.forEach(component=> { %>
+                        <option value="<%= component._id %>"><%= component.componentname %></option>
+                    <% }) %>
+                </select>
+        </form>
+        </div>
+
+        <div class="pc-builds">
+        <form action="/pc-builds" method="POST">
+                <label for="case">CASE :</label>
+                <select name="case" id="case" required>
+                    <% caseComponents.forEach(component=> { %>
+                        <option value="<%= component._id %>"><%= component.componentname %></option>
+                    <% }) %>
+                </select>
+        </form>
+        </div>
+
+
+            <div class="pc-builds">
+        <form action="/pc-builds" method="POST">
+                <label for="storage">Storage :</label>
+                <select name="case" id="case" required>
+                    <% storageComponents.forEach(component=> { %>
+                        <option value="<%= component._id %>"><%= component.componentname %></option>
+                    <% }) %>
+                </select>
+        </form>
+        </div>
+
+
+          <div class="pc-builds">
+        <form action="/pc-builds" method="POST">
+                <label for="powerSupply">POWER SUPPLY:</label>
+                <select name="power supply" id="power supply" required>
+                    <% powerSupplyComponents.forEach(component=> { %>
+                        <option value="<%= component._id %>"><%= component.componentname %></option>
+                    <% }) %>
+                </select>
+        </form>
+        </div>
+
+
 </body>
 </html>
