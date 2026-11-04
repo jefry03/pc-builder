@@ -8,6 +8,19 @@
 <body>
      <%- include('./partials/navbar') %>
     <h1>Creat your dream pc</h1>
+   <form>
+  <label for="fname">PC BUILDS NAME </label><br>
+  <input type="text" id="fname" name="fname"><br>
+</form>
+    <label>
+     <select name="components" id="components">
+        <option value="cpu">CPU</option>
+        <option value="gpu">GPU</option>
+        <option value="ram">RAM</option>
+        <option value="storage">Storage</option>
+        <option value="motherboard">Motherboard</option>
+        <option value="case">Case</option> 
+    </label>
    
 </body>
 </html>

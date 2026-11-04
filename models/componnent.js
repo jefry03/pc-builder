@@ -24,4 +24,8 @@ price : {
 
 const Component = mongoose.model("Component", componentSchema);
 
+
+
+
+
 module.exports = Component;

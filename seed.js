@@ -16,8 +16,33 @@ async function seedComponents() {
         { componentname: "AMD Radeon RX 6800 XT", category: "GPU", brand: "AMD", price: 649.99 },
         { componentname: "Corsair Vengeance LPX 16GB (2 x 8GB) DDR4-3200", category: "RAM", brand: "Corsair", price: 89.99 },
         { componentname: "G.Skill Trident Z RGB 32GB (2 x 16GB) DDR4-3600", category: "RAM", brand: "G.Skill", price: 179.99 },
-        { componentname: "Samsung 970 EVO Plus 1TB NVMe SSD", category: "Storage", brand: "Samsung", price: 149.99 },]
-        
+        { componentname: "Samsung 970 EVO Plus 1TB NVMe SSD", category: "Storage", brand: "Samsung", price: 149.99 },
+        {componentname: "Western Digital Blue 1TB HDD", category: "powerSupply", brand: "Western Digital", price: 49.99 },
+        {componentname: "Western Digital Blue 1TB HDD", category: "case", brand: "Western Digital", price: 49.99 }
+    ];
+
+    const cpuComponents = components.filter((component) => {
+    return component.category === "CPU";
+});
+
+const gpuComponents = components.filter((component) => {
+    return component.category === "GPU";
+});
+
+const ramComponents = components.filter((component) => {
+    return component.category === "RAM";
+});
+
+const storageComponents = components.filter((component) => {
+    return component.category === "Storage";
+});
+
+const powerSupplyComponents = components.filter((component) => {
+    return component.category === "powerSupply";
+});
+const caseComponents = components.filter((component) => {
+    return component.category === "case";
+});
 
     try {
         await Component.insertMany(components);

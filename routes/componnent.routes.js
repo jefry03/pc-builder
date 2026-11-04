@@ -11,6 +11,7 @@ router.get('/', isSignedIn, async (req, res) => {
 });
 
 
+
 router.get('/new', isSignedIn, (req, res) => {
     res.render('components.ejs'); 
 });
