@@ -1,0 +1,10 @@
+<h1>My PC Builds</h1>
+
+<a href="/components">Create New Build</a>
+
+<% builds.forEach((build) => { %>
+  <div>
+    <h2><%= build.name %></h2>
+    <p>Total Price: <%= build.totalPrice %> BHD</p>
+  </div>
+<% }) %>

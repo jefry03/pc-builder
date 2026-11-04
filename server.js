@@ -16,7 +16,7 @@ const passUserToView = require("./middleware/pass-user-to-view.js");
 const authController = require("./routes/auth.routes.js");
 const indexController = require("./routes/index.routes.js");
 const componentController = require("./routes/componnent.routes.js");
-
+const pcBuildController = require("./routes/pcBuild.routes.js")
 
 
 // Middleware
@@ -50,7 +50,7 @@ app.use(passUserToView)
 app.use('/auth',authController)
 app.use('/components', componentController)
 app.use('/',indexController)
-
+app.use('/pc-builds', pcBuildController)
 
 
 // connect to database and listen on Port 3000

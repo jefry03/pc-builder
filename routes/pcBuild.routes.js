@@ -1,18 +1,24 @@
 const router = require("express").Router()
 const isSignedIn = require('../middleware/is-signed-in')
 const Component = require('../models/Componnent')
+const PcBuild = require('../models/PcBuild')
 
 router.use(isSignedIn)
-
-router.post ( "/" , async , (req ,res ) => {
-    const newBuild = PcBuild.create ({
+router.get("/", async (req, res) => {
+  const builds = await PcBuild.find({
+    owner: req.session.user._id
+  });
+    res.render("my-builds.ejs", { builds });
+});
+router.post ( "/" , async (req ,res ) => {
+    const newBuild = await PcBuild.create ({
       name: req.body.name,
-      gpu: req.body.gpu ,
-      cpu: req.body.cpu ,
-      motherboard: req.body.motherboard,
-      powerSupply: req.body.powerSupply,
-      case: req.body.case,
-      ram : req.body.ram
+      owner: req.session.user._id,
+      components: req.body.components,
+      totalPrice: req.body.totalPrice
     })
-
+    console.log("save build:" ,newBuild)
+     res.redirect("/pc-builds")
 } )
+
+module.exports = router
