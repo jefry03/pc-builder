@@ -11,56 +11,50 @@ async function seedComponnent() {
 
    const componnent = [
 
-    { componnentname: "Intel Core i7-14700K", category: "CPU", brand: "Intel", price: 389.99 },
-    { componnentname: "AMD Ryzen 7 7800X3D", category: "CPU", brand: "AMD", price: 369.00 },
-    { componnentname: "Intel Core i5-13600K", category: "CPU", brand: "Intel", price: 283.00 },
-    { componnentname: "AMD Ryzen 5 7600X", category: "CPU", brand: "AMD", price: 209.00 },
-    { componnentname: "NVIDIA GeForce RTX 4070 Super", category: "GPU", brand: "NVIDIA", price: 589.99 },
-    { componnentname: "AMD Radeon RX 7800 XT", category: "GPU", brand: "AMD", price: 489.99 },
-    { componnentname: "NVIDIA GeForce RTX 4060 Ti 8GB", category: "GPU", brand: "NVIDIA", price: 379.99 },
-    { componnentname: "ASUS TUF Gaming RTX 4080 Super 16GB", category: "GPU", brand: "ASUS", price: 999.99 },
-    { componnentname: "Corsair Vengeance RGB DDR5 32GB (2x16GB) 6000MHz", category: "RAM", brand: "Corsair", price: 119.99 },
-    { componnentname: "G.Skill Trident Z5 RGB 32GB (2x16GB) DDR5 6000MHz", category: "RAM", brand: "G.Skill", price: 112.99 },
-    { componnentname: "Kingston FURY Beast DDR4 16GB (2x8GB) 3200MHz", category: "RAM", brand: "Kingston", price: 44.99 },
-    { componnentname: "Samsung 990 PRO 2TB NVMe M.2 SSD", category: "Storage", brand: "Samsung", price: 169.99 },
-    { componnentname: "Crucial P3 Plus 1TB PCIe Gen4 NVMe M.2 SSD", category: "Storage", brand: "Crucial", price: 68.99 },
-    { componnentname: "Western Digital WD_BLACK SN850X 2TB SSD", category: "Storage", brand: "Western Digital", price: 154.99 },
-    { componnentname: "MSI MAG B650 TOMAHAWK WIFI", category: "MOTHERBOARD", brand: "MSI", price: 199.99 },
-    { componnentname: "ASUS ROG STRIX Z790-A GAMING WIFI", category: "MOTHERBOARD", brand: "ASUS", price: 349.99 },
-    { componnentname: "Gigabyte B760 AORUS ELITE AX", category: "MOTHERBOARD", brand: "Gigabyte", price: 179.99 },
-    { componnentname: "NZXT H7 Flow RGB Mid-Tower Case", category: "case", brand: "NZXT", price: 129.99 },
-    { componnentname: "Corsair 4000D Airflow Tempered Glass", category: "case", brand: "Corsair", price: 89.99 },
-    { componnentname: "Lian Li O11 Dynamic EVO", category: "case", brand: "Lian Li", price: 149.99 },
-    { componnentname: "Corsair RM850x 850W 80+ Gold Fully Modular", category: "powerSupply", brand: "Corsair", price: 129.99 },
-    { componnentname: "EVGA SuperNOVA 750 GT 80+ Gold 750W", category: "powerSupply", brand: "EVGA", price: 99.99 },
-    { componnentname: "Seasonic FOCUS GX-1000 1000W 80+ Gold", category: "powerSupply", brand: "Seasonic", price: 169.99 }
-];
-Componnent.price.forEach(function(price) {
-  total += price;
-});
-console.log("Total price: " + total);
-    const cpuComponnent = componnent.filter((component) => {
-    return component.category === "CPU";
-});
+    { componnentname: "Intel-Core-I3-13100-Desktop-Processor-4-Cores-4-5-GHz-LGA1700-Computer-CPU", category: "CPU", brand: "Intel", price: 389.99 },
+    { componnentname: "Intel Core I3-14100F CPU", category: "CPU", brand: "intel", price: 369.00 },
+    { componnentname: "AMD Ryzen 5 8500g CPU", category: "CPU", brand: "AMD", price: 283.00 },
+    { componnentname: "Intel Core i5-12400F Tray CPU", category: "CPU", brand: "intel", price: 209.00 },
+    { componnentname: "Intel Core Ultra 5 250KF Plus CPU", category: "CPU", brand: "intel", price: 589.99 },
 
-const gpuComponnent = componnent.filter((component) => {
-    return component.category === "GPU";
-});
+    { componnentname: "Colorful GeForce RTX 5050 Battle AX DUO 8GB GPU", category: "GPU", brand: "NVIDIA", price: 489.99 },
+    { componnentname: "ZOTAC Gaming GeForce RTX 5050 Twin Edge OC 8GB GPU", category: "GPU", brand: "NVIDIA", price: 379.99 },
+    { componnentname: "Colorful Game GeForce RTX 5060 Ultra DUO OC 8GB-V GPU", category: "GPU", brand: "ASUS", price: 999.99 },
+    { componnentname: "ZOTAC Gaming GeForce RTX 5060 Ti 8GB Twin Edge OC GDDR7 GPU", category: "GPU", brand: "Corsair", price: 119.99 },
+    { componnentname: "Manli GeForce RTX Nebula 5060 8GB GDDR7 V2 GPU", category: "GPU", brand: "G.Skill", price: 112.99 },
 
-const ramComponnent = componnent.filter((component) => {
-    return component.category === "RAM";
-});
+    { componnentname: "XANDER XP II - 650W - 80 Plus White - 120mm Fan - PSU", category: "powerSupply", brand: "Kingston", price: 44.99 },
+    { componnentname: "Aigo AP550 550W 80+ Power Supply Non-Modular Black", category: "powerSupply", brand: "Samsung", price: 169.99 },
+    { componnentname: "Aigo AT550 550W 80+ Bronze Power Supply Black", category: "powerSupply", brand: "Crucial", price: 68.99 },
+    { componnentname: "DeepCool PF600X 600W 80+ Bronze PSU", category: "powerSupply", brand: "Western Digital", price: 154.99 },
+    { componnentname: "DeepCool PF500D 500W 80 PLUS 230V EU White Non-Modular PSU", category: "powerSupply", brand: "MSI", price: 199.99 },
 
-const storageComponnent = componnent.filter((component) => {
-    return component.category === "Storage";
-});
+    { componnentname: "Adata Legend 710 Gen 3 M.2 - 256gb", category: "storage", brand: "ASUS", price: 349.99 },
+    { componnentname: "Hiksemi Wave NVMe M.2 - 512GB", category: "storage", brand: "Gigabyte", price: 179.99 },
+    { componnentname: "ADDLINK S70L M.2 NVMe - 512gb", category: "storage", brand: "NZXT", price: 129.99 },
+    { componnentname: "XPG Gammix S70 Blade Gen 4 M.2 - 512gb", category: "storrage", brand: "Corsair", price: 89.99 },
+    { componnentname: "XPG GAMMIX S60 Gen 4 NVME M.2 - Black - 512gb", category: "storage", brand: "Lian Li", price: 149.99 },
 
-const powerSupplyComponnent = componnent.filter((component) => {
-    return component.category === "powerSupply";
-});
-const caseComponnent = componnent.filter((component) => {
-    return component.category === "case";
-});
+    { componnentname: "Gamdias Aura GC9M Elite ARGB Mini Tower Case - White", category: "case", brand: "Corsair", price: 129.99 },
+    { componnentname: "Gamdias Aura GC7 ARGB Mid Tower Case", category: "case", brand: "EVGA", price: 99.99 },
+    { componnentname: "Gamdias Aura GC9M Elite ARGB Mini Tower Case - Black", category: "case", brand: "Seasonic", price: 169.99 } ,
+    { componnentname: "Gamdias Aura GC5 Elite ARGB Mid Tower Case", category: "case", brand: "Seasonic", price: 169.99 } ,
+    { componnentname: "Gamdias Aura GC5 Elite ARGB Mid Tower Case - White", category: "case", brand: "Seasonic", price: 169.99 } ,
+
+    { componnentname: "Asus Prime H610M-K DDR5 gaming motherboard", category: "MOTHERBOARD", brand: "Corsair", price: 129.99 },
+    { componnentname: "Asus Prime H610M-K DDR5 ARGB gaming motherboard", category: "MOTHERBOARD", brand: "EVGA", price: 99.99 },
+    { componnentname: "Colorful H610M-E M.2 V20 Motherboard", category: "MOTHERBOARD", brand: "Seasonic", price: 169.99 } ,
+    { componnentname: "Colorful Battle-AX B760M-K D5 V20 Motherboard", category: "MOTHERBOARD", brand: "Seasonic", price: 169.99 } ,
+    { componnentname: "Gigabyte H810M H Motherboard", category: "MOTHERBOARD", brand: "Seasonic", price: 169.99 } ,
+    
+    { componnentname: "XPG Spectrix D35G DDR4 8gb - 3200Mhz (1x8gb) - Black", category: "RAM", brand: "Corsair", price: 129.99 },
+    { componnentname: "ADATA Premier DDR5 8GB 5600MHz U-DIMM - Single Stick", category: "RAM", brand: "EVGA", price: 99.99 },
+    { componnentname: "XPG GAMMIX D35 DDR4 16gb - 3600Mhz (2x8gb) - White", category: "RAM", brand: "Seasonic", price: 169.99 } ,
+    { componnentname: "XPG Spectrix D60G DDR4 16GB - 3600Mhz (2x8Gb) - RGB", category: "RAM", brand: "Seasonic", price: 169.99 } ,
+    { componnentname: "XPG Armax DDR5 RGB 32GB - 6000MHz (2x16GB) - Black", category: "RAM", brand: "Seasonic", price: 169.99 } ,
+
+];   
+
 
     try {
         await Component.insertMany(componnent);
