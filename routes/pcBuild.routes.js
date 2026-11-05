@@ -23,5 +23,13 @@ router.post ( "/" , async (req ,res ) => {
 } )
 
 
+router.delete("/:buildid" , async (req , res) =>{
+  await PcBuild.findOneAndDelete({
+    _id:req.params.buildid,
+    owner:req.session.user._id
+  }) ;
+   res.redirect("/pc-builds")
+})
+
 
 module.exports = router
