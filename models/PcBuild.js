@@ -15,7 +15,7 @@ const pcBuildSchema = new mongoose.Schema({
     }]
      , totalPrice: {
         type: Number,
-        // required: true,
+        required: true,
         min: 0
     }
 }, { timestamps: true });

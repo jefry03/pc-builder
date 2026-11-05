@@ -7,9 +7,11 @@
     <h2><%= build.name %></h2>
 
     <h3>Components:</h3>
+    <% let totalPrice = 0 %>
 
     <% build.components.forEach((component) => { %>
       <% if (component) { %>
+      <% totalPrice += component.price %>
         <p>
           Component name: <%= component.componnentname %>
           - <%= component.price %> BHD
@@ -18,10 +20,12 @@
     <% }) %>
 
 
-            <a href="/pc-builds/<%= build._id %>/edit">Edit</a>
+    <a href="/pc-builds/<%= build._id %>/edit">Edit</a>
 
-    <h3>Total Price: <%= build.totalPrice ?? 0 %> BHD</h3>
-      
+    <h3>
+      Total Price: <%= totalPrice ?? 0 %> BHD
+    </h3>
+
     <hr>
   </div>
 

@@ -35,7 +35,10 @@ async function seedComponnent() {
     { componnentname: "EVGA SuperNOVA 750 GT 80+ Gold 750W", category: "powerSupply", brand: "EVGA", price: 99.99 },
     { componnentname: "Seasonic FOCUS GX-1000 1000W 80+ Gold", category: "powerSupply", brand: "Seasonic", price: 169.99 }
 ];
-
+Componnent.price.forEach(function(price) {
+  total += price;
+});
+console.log("Total price: " + total);
     const cpuComponnent = componnent.filter((component) => {
     return component.category === "CPU";
 });

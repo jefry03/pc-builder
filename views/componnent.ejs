@@ -16,8 +16,9 @@
         </div>
         <div class="pc-builds">
             <label for="components">Processor (CPU):</label>
-            <select name="components" id="cpu" required>
+            <select required name="components" id="cpu" required>
                 <% cpuComponents.forEach(component => { %>
+                    <option value="">--------</option>
                     <option value="<%= component._id %>"><%= component.componnentname %></option>
                 <% }) %>
             </select>
@@ -25,8 +26,9 @@
 
         <div class="pc-builds">
             <label for="components">Graphics Processing Unit (GPU):</label>
-            <select name="components" id="gpu" required>
+            <select required name="components" id="gpu" required>
                 <% gpuComponents.forEach(component => { %>
+                    <option value="">--------</option>
                     <option value="<%= component._id %>"><%= component.componnentname %></option>
                 <% }) %>
             </select>
@@ -34,8 +36,9 @@
 
         <div class="pc-builds">
             <label for="components">Random Access Memory (RAM):</label>
-            <select name="components" id="ram" required>
+            <select required name="components" id="ram" required>
                 <% ramComponents.forEach(component => { %>
+                    <option value="">--------</option>
                     <option value="<%= component._id %>"><%= component.componnentname %></option>
                 <% }) %>
             </select>
@@ -43,8 +46,9 @@
 
         <div class="pc-builds">
             <label for="components">MOTHERBOARD:</label>
-            <select name="components" id="motherboard" required>
+            <select required name="components" id="motherboard" required>
                 <% motherboardComponents.forEach(component => { %>
+                    <option value="">--------</option>
                     <option value="<%= component._id %>"><%= component.componnentname %></option>
                 <% }) %>
             </select>
@@ -52,8 +56,9 @@
 
         <div class="pc-builds">
             <label for="components">CASE:</label>
-            <select name="components" id="case" required>
+            <select required name="components" id="case" required>
                 <% caseComponents.forEach(component => { %>
+                    <option value="">--------</option>
                     <option value="<%= component._id %>"><%= component.componnentname %></option>
                 <% }) %>
             </select>
@@ -61,8 +66,9 @@
 
         <div class="pc-builds">
             <label for="components">Storage:</label>
-            <select name="components" id="storage" required>
+            <select required name="components" id="storage" required>
                 <% storageComponents.forEach(component => { %>
+                    <option value="">--------</option>
                     <option value="<%= component._id %>"><%= component.componnentname %></option>
                 <% }) %>
             </select>
@@ -70,8 +76,9 @@
 
         <div class="pc-builds">
             <label for="components">POWER SUPPLY:</label>
-            <select name="components" id="power supply" required>
+            <select required name="components" id="power supply" required>
                 <% powerSupplyComponents.forEach(component => { %>
+                    <option value="">--------</option>
                     <option value="<%= component._id %>"><%= component.componnentname %></option>
                 <% }) %>
             </select>
