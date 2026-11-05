@@ -31,5 +31,24 @@ router.delete("/:buildid" , async (req , res) =>{
    res.redirect("/pc-builds")
 })
 
+router.get("/:buildid/edit" , async (req , res)=>{
+  const build = await PcBuild.findOne({
+    _id:req.params.buildid,
+    owner:req.session.user._id
+  })
+
+  const allcomponents = await Component.find()
+  res.render("edit-build.ejs", {
+  build ,
+  cpucomponent: allcomponents.filter(c => c.category === "CPU"),
+  gpucomponent: allcomponents.filter(c => c.category === "GPU"),
+  Casecomponent: allcomponents.filter(c => c.category === "Case"),
+  powerSupplycomponent: allcomponents.filter(c => c.category === "PowerSupply"),
+  motherboardcomponent: allcomponents.filter(c => c.category === "Motherboard"),
+  Ramcomponent: allcomponents.filter(c => c.category === "RAM"),
+  storagecomponent: allcomponents.filter(c => c.category === "Storage")
+  })
+})
+
 
 module.exports = router
