@@ -29,11 +29,11 @@ async function seedComponnent() {
     { componnentname: "DeepCool PF600X 600W 80+ Bronze PSU", category: "powerSupply", brand: "Western Digital", price: 154.99 },
     { componnentname: "DeepCool PF500D 500W 80 PLUS 230V EU White Non-Modular PSU", category: "powerSupply", brand: "MSI", price: 199.99 },
 
-    { componnentname: "Adata Legend 710 Gen 3 M.2 - 256gb", category: "storage", brand: "ASUS", price: 349.99 },
-    { componnentname: "Hiksemi Wave NVMe M.2 - 512GB", category: "storage", brand: "Gigabyte", price: 179.99 },
-    { componnentname: "ADDLINK S70L M.2 NVMe - 512gb", category: "storage", brand: "NZXT", price: 129.99 },
-    { componnentname: "XPG Gammix S70 Blade Gen 4 M.2 - 512gb", category: "storrage", brand: "Corsair", price: 89.99 },
-    { componnentname: "XPG GAMMIX S60 Gen 4 NVME M.2 - Black - 512gb", category: "storage", brand: "Lian Li", price: 149.99 },
+    { componnentname: "Adata Legend 710 Gen 3 M.2 - 256gb", category: "Storage", brand: "ASUS", price: 349.99 },
+    { componnentname: "Hiksemi Wave NVMe M.2 - 512GB", category: "Storage", brand: "Gigabyte", price: 179.99 },
+    { componnentname: "ADDLINK S70L M.2 NVMe - 512gb", category: "Storage", brand: "NZXT", price: 129.99 },
+    { componnentname: "XPG Gammix S70 Blade Gen 4 M.2 - 512gb", category: "Storage", brand: "Corsair", price: 89.99 },
+    { componnentname: "XPG GAMMIX S60 Gen 4 NVME M.2 - Black - 512gb", category: "Storage", brand: "Lian Li", price: 149.99 },
 
     { componnentname: "Gamdias Aura GC9M Elite ARGB Mini Tower Case - White", category: "case", brand: "Corsair", price: 129.99 },
     { componnentname: "Gamdias Aura GC7 ARGB Mid Tower Case", category: "case", brand: "EVGA", price: 99.99 },
@@ -55,6 +55,29 @@ async function seedComponnent() {
 
 ];   
 
+
+    const cpuComponnent = componnent.filter((component) => {
+    return component.category === "CPU";
+});
+
+const gpuComponnent = componnent.filter((component) => {
+    return component.category === "GPU";
+});
+
+const ramComponnent = componnent.filter((component) => {
+    return component.category === "RAM";
+});
+
+const storageComponnent = componnent.filter((component) => {
+    return component.category === "Storage";
+});
+
+const powerSupplyComponnent = componnent.filter((component) => {
+    return component.category === "powerSupply";
+});
+const caseComponnent = componnent.filter((component) => {
+    return component.category === "case";
+});
 
     try {
         await Component.insertMany(componnent);

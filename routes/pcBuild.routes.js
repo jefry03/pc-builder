@@ -53,7 +53,7 @@ router.get("/:buildid/edit" , async (req , res)=>{
   });
   
   const storageComponnents = allComponnents.filter((Componnent) => {
-      return Componnent.category === "Storage";
+      return Componnent.category === "storage";
   });
   
   const powerSupplyComponnents = allComponnents.filter((Componnent) => {
