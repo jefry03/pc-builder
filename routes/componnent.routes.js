@@ -6,7 +6,7 @@ const isSignedIn = require('../middleware/is-signed-in')
 // Create routes
 
 router.get('/', isSignedIn, async (req, res) => {
-    const allComponnents = await ComponnenEt.find();
+    const allComponnents = await Componnent.find();
 
     const cpuComponnents = allComponnents.filter((Componnent) => {
         return Componnent.category === "CPU";

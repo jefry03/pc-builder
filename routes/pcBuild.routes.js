@@ -4,11 +4,12 @@ const Component = require('../models/Componnent')
 const PcBuild = require('../models/PcBuild')
 
 router.use(isSignedIn)
+
 router.get("/", async (req, res) => {
   const builds = await PcBuild.find({
     owner: req.session.user._id
-  });
-    res.render("my-builds.ejs", { builds });
+  }).populate("components");
+  res.render("my-builds.ejs", { builds: builds });
 });
 router.post ( "/" , async (req ,res ) => {
     const newBuild = await PcBuild.create ({
@@ -20,5 +21,7 @@ router.post ( "/" , async (req ,res ) => {
     console.log("save build:" ,newBuild)
      res.redirect("/pc-builds")
 } )
+
+
 
 module.exports = router

@@ -5,6 +5,21 @@
 <% builds.forEach((build) => { %>
   <div>
     <h2><%= build.name %></h2>
-    <p>Total Price: <%= build.totalPrice %> BHD</p>
+
+    <h3>Components:</h3>
+
+    <% build.components.forEach((component) => { %>
+      <% if (component) { %>
+        <p>
+          Component name: <%= component.componnentname %>
+          - <%= component.price %> BHD
+        </p>
+      <% } %>
+    <% }) %>
+
+
+    <h3>Total Price: <%= build.totalPrice ?? 0 %> BHD</h3>
+
+    <hr>
   </div>
 <% }) %>
