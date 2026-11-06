@@ -1,3 +1,17 @@
+:root {
+  --page: linear-gradient(135deg, #FAF5EF, #FBF6EE);
+  --card: #FFFDF9;
+  --soft: #FBF6EE;
+  --text: #3B2A20;
+  --muted: #6B5B4E;
+  --main: #B45309;
+  --main-text: #FFFFFF;
+  --main-hover: #92400E;
+  --nav: #3B2A20;
+  --nav-text: #FAF5EF;
+  --line: #E7D8C6;
+  --line-hover: #D9B99B;
+}
 body{
     background-color: white;
     color: black;
