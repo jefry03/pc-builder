@@ -20,6 +20,10 @@ price : {
     required: true,
     min: 0
 } ,
+image: {
+    type: String,
+    default: "/images/default-component.png"
+}
 }, { timestamps: true });
 
 const Componnent = mongoose.model("Componnent", componnentSchema);

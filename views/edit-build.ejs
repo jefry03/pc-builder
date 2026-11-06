@@ -8,11 +8,12 @@
 </head>
 
 <body>
+      <link rel="stylesheet" href="/css/style.css">
     <%- include('./partials/navbar') %>
         <h1>edit your pc</h1>
-        <form action="/pc-builds" method="POST">
+        <form action="/pc-builds" method="POST" class="build-form">
 
-        <div>
+        <div class="parts">
             <label for="name">PC BUILD NAME:</label><br>
             <input type="text" id="name" name="name" required><br><br>
         </div>
@@ -81,7 +82,7 @@
         
 
         <br>
-        <button type="submit">Save Build</button>
+        <button type="submit">update Build</button>
     </form>
 
 

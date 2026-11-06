@@ -1,104 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Your PC</title>
 </head>
+
 <body>
     <link rel="stylesheet" href="/css/style.css">
     <%- include('./partials/navbar') %>
-    <h1>Create your dream PC</h1>
-    <form action="/pc-builds" method="POST" class="build-form">
+        <h1>Create your dream PC</h1>
+        <form action="/pc-builds" method="POST" class="build-form">
 
-        <div class="parts">
-            <label for="name">PC BUILD NAME:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-        </div>
-        <div class="pc-builds">
-            <label for="components">Processor (CPU):</label>
-            <select required name="components" id="cpu" required>
-                <option value="">--------</option>
-                <% cpuComponents.forEach(component => { %>
-                    <option value="<%= component._id %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+            <div class="parts">
 
-                <% }) %>
-            </select>
-        </div>
+                <div class="name">
+                    <label for="name">PC BUILD NAME:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                </div>
 
-        <div class="pc-builds">
-            <label for="components">Graphics Processing Unit (GPU):</label>
-            <select required name="components" id="gpu" required>
-                <option value="">--------</option>
-                <% gpuComponents.forEach(component => { %>
-                    <option value="<%= component._id %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                <div class="pc-builds">
+                    <label for="components">Processor (CPU):</label>
+                    <select required name="components" id="cpu" required>
+                        <option value="">--------</option>
+                        <% cpuComponents.forEach(component=> { %>
+                            <option value="<%= component._id %>">
+                                <%= component.componnentname %> - <%= component.price %> BHD
+                            </option>
 
-                <% }) %>
-            </select>
-        </div>
+                            <% }) %>
+                    </select>
+                </div>
 
-        <div class="pc-builds">
-            <label for="components">Random Access Memory (RAM):</label>
-            <select required name="components" id="ram" required>
-                <option value="">--------</option>
-                <% ramComponents.forEach(component => { %>
-                    <option value="<%= component._id %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                <div class="pc-builds">
+                    <label for="components">Graphics Processing Unit (GPU):</label>
+                    <select required name="components" id="gpu" required>
+                        <option value="">--------</option>
+                        <% gpuComponents.forEach(component=> { %>
+                            <option value="<%= component._id %>">
+                                <%= component.componnentname %> - <%= component.price %> BHD
+                            </option>
 
-                <% }) %>
-            </select>
-        </div>
+                            <% }) %>
+                    </select>
+                </div>
 
-        <div class="pc-builds">
-            <label for="components">MOTHERBOARD:</label>
-            <select required name="components" id="motherboard" required>
-                <option value="">--------</option>
-                <% motherboardComponents.forEach(component => { %>
-                  <option value="<%= component._id %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                <div class="pc-builds">
+                    <label for="components">Random Access Memory (RAM):</label>
+                    <select required name="components" id="ram" required>
+                        <option value="">--------</option>
+                        <% ramComponents.forEach(component=> { %>
+                            <option value="<%= component._id %>">
+                                <%= component.componnentname %> - <%= component.price %> BHD
+                            </option>
 
-                <% }) %>
-            </select>
-        </div>
+                            <% }) %>
+                    </select>
+                </div>
 
-        <div class="pc-builds">
-            <label for="components">CASE:</label>
-            <select required name="components" id="case" required>
-                <option value="">--------</option>
-                <% caseComponents.forEach(component => { %>
-                  <option value="<%= component._id %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                <div class="pc-builds">
+                    <label for="components">MOTHERBOARD:</label>
+                    <select required name="components" id="motherboard" required>
+                        <option value="">--------</option>
+                        <% motherboardComponents.forEach(component=> { %>
+                            <option value="<%= component._id %>">
+                                <%= component.componnentname %> - <%= component.price %> BHD
+                            </option>
 
-                <% }) %>
-            </select>
-        </div>
+                            <% }) %>
+                    </select>
+                </div>
 
-        <div class="pc-builds">
-            <label for="components">Storage:</label>
-            <select required name="components" id="storage" required>
-                <option value="">--------</option>
-                <% storageComponents.forEach(component => { %>
-                   <option value="<%= component._id %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                <div class="pc-builds">
+                    <label for="components">CASE:</label>
+                    <select required name="components" id="case" required>
+                        <option value="">--------</option>
+                        <% caseComponents.forEach(component=> { %>
+                            <option value="<%= component._id %>">
+                                <%= component.componnentname %> - <%= component.price %> BHD
+                            </option>
 
-                <% }) %>
-            </select>
-        </div>
+                            <% }) %>
+                    </select>
+                </div>
 
-        <div class="pc-builds">
-            <label for="components">POWER SUPPLY:</label>
-            <select required name="components" id="power supply" required>
-                                    <option value="">--------</option>
+                <div class="pc-builds">
+                    <label for="components">Storage:</label>
+                    <select required name="components" id="storage" required>
+                        <option value="">--------</option>
+                        <% storageComponents.forEach(component=> { %>
+                            <option value="<%= component._id %>">
+                                <%= component.componnentname %> - <%= component.price %> BHD
+                            </option>
 
-                <% powerSupplyComponents.forEach(component => { %>
-                   <option value="<%= component._id %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                            <% }) %>
+                    </select>
+                </div>
 
-                <% }) %>
-            </select>
-        </div>
-        
-          <div class="summery">
-            <h2>build summery</h2>
-            <p>choose all 7 parts then save your build</p>
-        <button type="submit">Save Build</button> 
-    </div>
-    </form>
+                <div class="pc-builds">
+                    <label for="components">POWER SUPPLY:</label>
+                    <select required name="components" id="power supply" required>
+                        <option value="">--------</option>
+
+                        <% powerSupplyComponents.forEach(component=> { %>
+                            <option value="<%= component._id %>">
+                                <%= component.componnentname %> - <%= component.price %> BHD
+                            </option>
+
+                            <% }) %>
+                    </select>
+                </div>
+            </div>
+
+            <div class="summery">
+                <h2>build summery</h2>
+                <p>choose all 7 parts then save your build</p>
+                <button type="submit">Save Build</button>
+            </div>
+        </form>
 
 </body>
+
 </html>
