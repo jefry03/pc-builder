@@ -8,14 +8,27 @@
   <body>
     <%- include('../partials/navbar') %>
     <h1>Create a new account!</h1>
+      <div class="auth-container">
     <form action="/auth/sign-up" method="post">
+       <div class="input-container">
       <label for="username">Username:</label>
-      <input type="text" name="username" id="username" />
+      <input type="text" name="username" id="username" placeholder="Enter username" required/> 
+    </div>
+    <div class="input-container">
       <label for="password">Password:</label>
-      <input type="password" name="password" id="password" />
+      <input type="password" name="password" id="password" placeholder="Enter password"
+          required /> </div>
+            <div class="input-container"></div>
       <label for="confirmPassword">Confirm Password:</label>
-      <input type="password" name="confirmPassword" id="confirmPassword" />
-      <button type="submit">Sign up</button>
+      <input type="password" name="confirmPassword" id="confirmPassword"    placeholder="Confirm password"
+          required />
+          </div>
+      <button type="submit" class="submit">Sign up</button>
+        <p class="signup-link">
+        Already have an account?
+        <a href="/auth/sign-in">Sign in</a>
+      </p>
     </form>
+  </div>
   </body>
 </html>
