@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
   </head>
+   <link rel="stylesheet" href="/css/auth.css">
   <body>
     <%- include('../partials/navbar') %>
     <h1>Create a new account!</h1>
       <div class="auth-container">
-    <form action="/auth/sign-up" method="post">
+    <form class="form-title" action="/auth/sign-up" method="post">
        <div class="input-container">
       <label for="username">Username:</label>
       <input type="text" name="username" id="username" placeholder="Enter username" required/> 

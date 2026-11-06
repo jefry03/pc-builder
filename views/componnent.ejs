@@ -6,11 +6,12 @@
     <title>Create Your PC</title>
 </head>
 <body>
+    <link rel="stylesheet" href="/css/style.css">
     <%- include('./partials/navbar') %>
     <h1>Create your dream PC</h1>
-    <form action="/pc-builds" method="POST">
+    <form action="/pc-builds" method="POST" class="build-form">
 
-        <div>
+        <div class="parts">
             <label for="name">PC BUILD NAME:</label><br>
             <input type="text" id="name" name="name" required><br><br>
         </div>
@@ -92,9 +93,11 @@
             </select>
         </div>
         
-
-        <br>
-        <button type="submit">Save Build</button>
+          <div class="summery">
+            <h2>build summery</h2>
+            <p>choose all 7 parts then save your build</p>
+        <button type="submit">Save Build</button> 
+    </div>
     </form>
 
 </body>
