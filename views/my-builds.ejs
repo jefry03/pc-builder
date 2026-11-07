@@ -4,38 +4,40 @@
 
 <a href="/components" class="creat-btn">Create New Build</a>
 
-<% builds.forEach((build) => { %>
+<% builds.forEach((build)=> { %>
   <div class="build-card">
-    <h2><%= build.name %></h2>
+    <% let totalPrice=0 %>
+      <% build.components.forEach((component)=> { %>
+        <% if (component) { %>
+          <% totalPrice +=component.price %>
+            <% } %>
+              <% }) %>
+                <div class="build-header">
+                  <h2>
+                    <%= build.name %>
+                  </h2>
+                  <h3> Total Price: <%= totalPrice.toFixed(2) %> BHD </h3>
 
-    <h3>Components:</h3>
-    <% let totalPrice = 0 %>
+                </div>
+                <h3>Components:</h3>
+                <div class="components-grid">
+                <% build.components.forEach((component)=> { %>
+                  <% if (component) { %>
+                    <div class="component-card">
+                     <p> Component name: <%= component.componnentname %></p>
+                      <span><%= component.price %> BHD</span>
+                    </div>
+                    <% } %>
+                      <% }) %>
+                  </div>
+                         <div class="build-actions">
+                        <a href="/pc-builds/<%= build._id %>/edit" class="edit-btn">Edit</a>
 
-    <% build.components.forEach((component) => { %>
-      <% if (component) { %>
-      <% totalPrice += component.price %>
-        <p>
-          Component name: <%= component.componnentname %>
-          - <%= component.price %> BHD
-        </p>
-      <% } %>
-    <% }) %>
 
+                        <form action="/pc-builds/<%= build._id %>?_method=DELETE" method="POST">
+                          <button type="submit" class="delete-btn">Delete</button>
+                       </form>
+  </div>
+   </div>
 
-    <a href="/pc-builds/<%= build._id %>/edit" class="edit-btn">Edit</a>
-
-    <h3>
-      Total Price: <%= totalPrice ?? 0 %> BHD
-    </h3>
-
-    <hr>
- 
-
-  <form action="/pc-builds/<%= build._id %>?_method=DELETE"
-        method="POST">
-    <button type="submit" class="delete-btn">Delete</button>
-  </form>
- </div>
- 
-<% }) %>
-
+  <% }) %>

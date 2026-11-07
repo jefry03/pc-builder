@@ -15,40 +15,116 @@
 .build-card {
     background-color: var(--card);
     border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 900px;
-    box-shadow: 0 4px 12px rgba(59, 42, 32, 0.10);
+    border-radius: 14px;
+    padding: 25px;
+    max-width: 1100px;
+    margin: 25px auto;
 }
-.build-card h2 {
-    font-size: 24px;
+
+.build-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.build-header h2 {
+    margin: 0;
+    font-size: 26px;
     color: var(--text);
 }
 
-.build-card h3 {
-    font-size: 18px;
-    color: var(--text);
+.build-header h3 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--main-hover);
+}
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
-.build-card p {
+.component-card {
+    background-color: var(--soft);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 0;
+}
+
+.component-card p {
+    margin: 0 0 10px 0;
     font-size: 15px;
-    line-height: 1.6;
-    color: var(--muted);
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.component-card span {
+    color: var(--main-hover);
+    font-weight: bold;
+    font-size: 15px;
+}
+.build-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.build-actions form {
+    margin: 0;
+}
+
+.edit-btn,
+.delete-btn {
+    display: inline-block;
+    width: auto;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0;
 }
 
 .edit-btn {
-    display: inline-block;
     background-color: var(--main);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
+    color: var(--main-text);
+}
+
+.edit-btn:hover {
+    background-color: var(--main-hover);
 }
 
 .delete-btn {
-    width: auto;
+    background-color: #DC2626;
+    color: white;
+}
+
+.delete-btn:hover {
     background-color: #B91C1C;
-    padding: 10px 20px;
-    font-size: 14px;
+}
+.creat-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 30px auto;
+    padding: 12px 25px;
+    background-color: var(--main);
+    color: var(--main-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.creat-btn:hover {
+    background-color: var(--main-hover);
+    transform: translateY(-2px);
 }
