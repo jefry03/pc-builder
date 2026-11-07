@@ -1,0 +1,54 @@
+:root {
+    --page: linear-gradient(135deg, #160A26, #0D0318);
+    --card: #24153D;
+    --soft: #24153D;
+    --text: #F3E8FF;
+    --muted: #F3E8FF;
+    --main: #A855F7;
+    --main-text: #160A26;
+    --main-hover: #C084FC;
+    --nav: #0D0318;
+    --nav-text: #F3E8FF;
+    --line: #3B2A5C;
+    --line-hover: #3B2A5C;
+}
+.build-card {
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(59, 42, 32, 0.10);
+}
+.build-card h2 {
+    font-size: 24px;
+    color: var(--text);
+}
+
+.build-card h3 {
+    font-size: 18px;
+    color: var(--text);
+}
+
+.build-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.edit-btn {
+    display: inline-block;
+    background-color: var(--main);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.delete-btn {
+    width: auto;
+    background-color: #B91C1C;
+    padding: 10px 20px;
+    font-size: 14px;
+}

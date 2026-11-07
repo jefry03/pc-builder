@@ -1,16 +1,16 @@
 :root {
-    --page: linear-gradient(135deg, #FAF5EF, #F3E9DC);
-    --card: #FFFDF9;
-    --soft: #FBF6EE;
-    --text: #3B2A20;
-    --muted: #6B5B4E;
-    --main: #B45309;
-    --main-text: #FFFFFF;
-    --main-hover: #92400E;
-    --nav: #3B2A20;
-    --nav-text: #FAF5EF;
-    --line: #E7D8C6;
-    --line-hover: #D9B99B;
+    --page: linear-gradient(135deg, #160A26, #0D0318);
+    --card: #24153D;
+    --soft: #24153D;
+    --text: #F3E8FF;
+    --muted: #F3E8FF;
+    --main: #A855F7;
+    --main-text: #160A26;
+    --main-hover: #C084FC;
+    --nav: #0D0318;
+    --nav-text: #F3E8FF;
+    --line: #3B2A5C;
+    --line-hover: #3B2A5C;
 }
 
 body {

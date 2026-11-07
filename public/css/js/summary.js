@@ -29,4 +29,3 @@ select.addEventListener("change" , updateSummary);
 });
 updateSummary();
 
-console.log("JavaScript is working");
