@@ -1,52 +1,39 @@
+ <link rel="stylesheet" href="/css/style.css">
+<h1>My PC Builds</h1>
 
-<link rel="stylesheet" href="/css/style.css">
+<a href="/components" class="creat-btn">Create New Build</a>
 
-<div class="my-builds">
+<% builds.forEach((build) => { %>
+  <div class="build-card">
+    <h2><%= build.name %></h2>
 
-  <h1>My PC Builds</h1>
+    <h3>Components:</h3>
+    <% let totalPrice = 0 %>
 
-  <a href="/components" class="create-btn">Create New Build</a>
+    <% build.components.forEach((component) => { %>
+      <% if (component) { %>
+      <% totalPrice += component.price %>
+        <p>
+          Component name: <%= component.componnentname %>
+          - <%= component.price %> BHD
+        </p>
+      <% } %>
+    <% }) %>
 
-  <% builds.forEach((build) => { %>
 
-    <div class="build-card">
+    <a href="/pc-builds/<%= build._id %>/edit" class="edit-btn">Edit</a>
 
-      <h2><%= build.name %></h2>
+    <h3>
+      Total Price: <%= totalPrice ?? 0 %> BHD
+    </h3>
 
-      <h3>Components:</h3>
+    <hr>
+  </div>
 
-      <% let totalPrice = 0 %>
+  <form action="/pc-builds/<%= build._id %>?_method=DELETE"
+        method="POST">
+    <button type="submit" class="delete-btn">Delete</button>
+  </form>
 
-      <% build.components.forEach((component) => { %>
-        <% if (component) { %>
-          <% totalPrice += component.price %>
+<% }) %>
 
-          <div class="component-item">
-            <span><%= component.componnentname %></span>
-            <span><%= component.price %> BHD</span>
-          </div>
-
-        <% } %>
-      <% }) %>
-
-      <h3 class="build-total">
-        Total Price: <%= totalPrice.toFixed(2) %> BHD
-      </h3>
-
-      <div class="build-buttons">
-
-        <a href="/pc-builds/<%= build._id %>/edit" class="edit-btn">
-          Edit Build
-        </a>
-
-        <form action="/pc-builds/<%= build._id %>?_method=DELETE" method="POST">
-          <button type="submit" class="delete-btn">Delete</button>
-        </form>
-
-      </div>
-
-    </div>
-
-  <% }) %>
-
-</div>

@@ -25,8 +25,9 @@
                     <select required name="components" id="cpu" required>
                         <option value="">--------</option>
                         <% cpuComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>">
-                                <%= component.componnentname %> - <%= component.price %> BHD
+                            <option value="<%= component._id %>" data-price="<%= component.price %>">
+                                <%= component.componnentname %> - 
+                                <%= component.price %> BHD
                             </option>
 
                             <% }) %>
@@ -38,7 +39,7 @@
                     <select required name="components" id="gpu" required>
                         <option value="">--------</option>
                         <% gpuComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
@@ -51,7 +52,7 @@
                     <select required name="components" id="ram" required>
                         <option value="">--------</option>
                         <% ramComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
@@ -64,7 +65,7 @@
                     <select required name="components" id="motherboard" required>
                         <option value="">--------</option>
                         <% motherboardComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
@@ -77,7 +78,7 @@
                     <select required name="components" id="case" required>
                         <option value="">--------</option>
                         <% caseComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
@@ -90,7 +91,7 @@
                     <select required name="components" id="storage" required>
                         <option value="">--------</option>
                         <% storageComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
@@ -104,7 +105,7 @@
                         <option value="">--------</option>
 
                         <% powerSupplyComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
