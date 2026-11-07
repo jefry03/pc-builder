@@ -1,108 +1,174 @@
 :root {
-  --page: linear-gradient(135deg, #FAF5EF, #FBF6EE);
-  --card: #FFFDF9;
-  --soft: #FBF6EE;
-  --text: #3B2A20;
-  --muted: #6B5B4E;
-  --main: #B45309;
-  --main-text: #FFFFFF;
-  --main-hover: #92400E;
-  --nav: #3B2A20;
-  --nav-text: #FAF5EF;
-  --line: #E7D8C6;
-  --line-hover: #D9B99B;
+    --page: linear-gradient(135deg, #FAF5EF, #F3E9DC);
+    --card: #FFFDF9;
+    --soft: #FBF6EE;
+    --text: #3B2A20;
+    --muted: #6B5B4E;
+    --main: #B45309;
+    --main-text: #FFFFFF;
+    --main-hover: #92400E;
+    --nav: #3B2A20;
+    --nav-text: #FAF5EF;
+    --line: #E7D8C6;
+    --line-hover: #D9B99B;
 }
-body{
-    background-color: white;
-    color: black;
+
+body {
+    background: var(--page);
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 20px;
-
+    box-sizing: border-box;
 }
 
-nav{
-    background-color: black;
+nav {
+    background-color: var(--nav);
     padding: 14px;
     text-align: center;
-    border-radius: 10px;
-
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(59, 42, 32, 0.18);
 }
 
 nav a {
-    color:white;
+    color: var(--nav-text);
     text-decoration: none;
-    display:inline-block;
+    display: inline-block;
     padding: 10px 20px;
-    margin:0 4px ;
-     border-radius: 8px;
+    margin: 0 4px;
+    border-radius: 8px;
+    transition: 0.2s;
 }
 
-nav a:hover{
-    background-color: gold;
-    color: black;
+nav a:hover {
+    background-color: var(--main);
+    color: var(--main-text);
 }
 
-h1{
-    background-color: gold;
-    color: black;
+h1 {
+    color: var(--text);
     width: 500px;
-    margin:25px auto ;
-    padding:14px ;
+    margin: 32px auto 28px auto;
+    padding-bottom: 12px;
     text-align: center;
-    font-size: 30px;
-    border-radius: 10px;
+    font-size: 34px;
+    border-bottom: 4px solid var(--main);
 }
 
-.build-form{
+.build-form {
     width: 1000px;
     margin: auto;
 }
 
-.parts{
+.parts {
     display: inline-block;
     width: 600px;
     vertical-align: top;
-
 }
 
-.summery{
-    display: inline;
+.summery {
+    display: inline-block;
     width: 300px;
     vertical-align: top;
     margin-left: 30px;
-    border: 1px solid lightgray ;
-    border-radius: 10px ;
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
     padding: 20px;
+    box-shadow: 0 6px 18px rgba(59, 42, 32, 0.10);
+    position: sticky;
+    top: 20px;
 }
 
-.name , .pc-builds {
-    border:1px solid lightgray ;
-     border-radius: 10px ;
-      padding: 15px;
-      margin-bottom: 12px;
+.summery h2 {
+    margin: 0 0 8px 0;
+    font-size: 22px;
 }
 
-label{
+.summery p {
+    margin: 0 0 8px 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.name,
+.pc-builds {
+    background-color: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(59, 42, 32, 0.05);
+    transition: 0.2s;
+}
+
+.name:hover,
+.pc-builds:hover {
+    transform: translateY(-2px);
+    border-color: var(--line-hover);
+    box-shadow: 0 8px 18px rgba(59, 42, 32, 0.10);
+}
+
+.name br {
+    display: none;
+}
+
+label {
     display: block;
     margin-bottom: 8px;
+    font-size: 15px;
     font-weight: bold;
 }
 
-input,select{
-    width:95%;
-      padding: 10px;
-       border:1px solid lightgray ;
-       border-radius: 6px;
+input,
+select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px;
+    background-color: var(--soft);
+    color: var(--text);
+    font-size: 15px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: 0.2s;
 }
 
-button{
-    background-color: gold;
-    color : black ;
-    border : none ;
-    border-radius: 8px;
-    padding : 14px ;
+select {
+    cursor: pointer;
+}
+
+input:hover,
+select:hover {
+    border-color: var(--line-hover);
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    background-color: var(--card);
+    border-color: var(--main);
+    box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.15);
+}
+
+button {
+    background-color: var(--main);
+    color: var(--main-text);
+    border: none;
+    border-radius: 10px;
+    padding: 14px;
     width: 100%;
     font-size: 18px;
+    font-weight: bold;
     margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(180, 83, 9, 0.25);
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: var(--main-hover);
+    transform: translateY(-2px);
 }
