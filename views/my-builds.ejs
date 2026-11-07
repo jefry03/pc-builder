@@ -24,7 +24,8 @@
                 <% build.components.forEach((component)=> { %>
                   <% if (component) { %>
                     <div class="component-card">
-                     <p> Component name: <%= component.componnentname %></p>
+                      <h4><%= component.category%></h4>
+                     <p> <%= component.componnentname %></p>
                       <span><%= component.price %> BHD</span>
                     </div>
                     <% } %>

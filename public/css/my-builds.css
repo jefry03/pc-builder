@@ -128,3 +128,9 @@
     background-color: var(--main-hover);
     transform: translateY(-2px);
 }
+.component-card h4 {
+    color: var(--main-hover);
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
