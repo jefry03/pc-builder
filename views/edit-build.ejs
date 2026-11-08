@@ -21,7 +21,7 @@
             <label for="components">Processor (CPU):</label>
             <select name="components" id="cpu" required>
                 <% cpuComponents.forEach(component => { %>
-                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %> value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %>- <%= component.price %> BHD</option>
+                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %> value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %>- <%= component.price %> BHD  <img src="<%=component.image%>" alt="image"></option>
                 <% }) %>
             </select>
         </div>
@@ -30,7 +30,7 @@
             <label for="components">Graphics Processing Unit (GPU):</label>
             <select name="components" id="gpu" required>
                 <% gpuComponents.forEach(component => { %>
-                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD  <img src="<%=component.image%>" alt="image"></option>
                 <% }) %>
             </select>
         </div>
@@ -39,7 +39,7 @@
             <label for="components">Random Access Memory (RAM):</label>
             <select name="components" id="ram" required>
                 <% ramComponents.forEach(component => { %>
-                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD  <img src="<%=component.image%>" alt="image"></option>
                 <% }) %>
             </select>
         </div>
@@ -48,7 +48,7 @@
             <label for="components">MOTHERBOARD:</label>
             <select name="components" id="motherboard" required>
                 <% motherboardComponents.forEach(component => { %>
-                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD  <img src="<%=component.image%>" alt="image"></option>
                 <% }) %>
             </select>
         </div>
@@ -57,16 +57,16 @@
             <label for="components">CASE:</label>
             <select name="components" id="case" required>
                 <% caseComponents.forEach(component => { %>
-                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD  <img src="<%=component.image%>" alt="image"></option>
                 <% }) %>
             </select>
         </div>
 
         <div class="pc-builds">
             <label for="components">Storage:</label>
-            <select name="components" id="storage" required>
+            <select name="components" id="Storage" required>
                 <% storageComponents.forEach(component => { %>
-                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD  <img src="<%=component.image%>" alt="image"></option>
                 <% }) %>
             </select>
         </div>
@@ -75,7 +75,7 @@
             <label for="components">POWER SUPPLY:</label>
             <select name="components" id="power supply" required>
                 <% powerSupplyComponents.forEach(component => { %>
-                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD</option>
+                    <option <% if(componentNames.includes(component.componnentname)){ %>selected <% } %>  value="<%= component._id %>" data-price="<%= component.price %>"><%= component.componnentname %> - <%= component.price %> BHD  <img src="<%=component.image%>" alt="image"></option>
                 <% }) %>
             </select>
         </div>

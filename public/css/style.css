@@ -172,3 +172,12 @@ button:hover {
     background-color: var(--main-hover);
     transform: translateY(-2px);
 }
+.component-card .component-image {
+ width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 
+.component-card{
+    width:50%
+} */

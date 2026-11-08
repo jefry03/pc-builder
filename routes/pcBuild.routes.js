@@ -53,7 +53,7 @@ router.get("/:buildid/edit" , async (req , res)=>{
   });
   
   const storageComponnents = allComponnents.filter((Componnent) => {
-      return Componnent.category === "storage";
+      return Componnent.category === "Storage";
   });
   
   const powerSupplyComponnents = allComponnents.filter((Componnent) => {
@@ -85,5 +85,19 @@ router.get("/:buildid/edit" , async (req , res)=>{
         componentNames
   })
 })
+
+
+
+router.put ( "/:buildid" , async (req ,res ) => {
+    const newBuild = await PcBuild.findByIdAndUpdate (req.params.buildid,{
+      name: req.body.name,
+      owner: req.session.user._id,
+      components: req.body.components,
+      totalPrice: req.body.totalPrice
+    })
+    console.log("save build:" ,newBuild)
+     res.redirect("/pc-builds")
+} )
+
 
 module.exports = router
