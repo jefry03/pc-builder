@@ -22,7 +22,7 @@ price : {
 } ,
 image: {
     type: String,
-    default: "/images/default-component.png"
+    default: ""
 }
 }, { timestamps: true });
 

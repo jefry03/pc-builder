@@ -11,7 +11,7 @@ async function seedComponnent() {
 
    const componnent = [
 
-    { componnentname: "Intel-Core-I3-13100-Desktop-Processor-4-Cores-4-5-GHz-LGA1700-Computer-CPU", category: "CPU", brand: "Intel", price: 389.99 },
+    { componnentname: "Intel-Core-I3-13100-Desktop-Processor-4-Cores-4-5-GHz-LGA1700-Computer-CPU", category: "CPU", brand: "Intel", price: 389.99 , image: "/css/images/intel-i3-13100.avif" },
     { componnentname: "Intel Core I3-14100F CPU", category: "CPU", brand: "intel", price: 369.00 },
     { componnentname: "AMD Ryzen 5 8500g CPU", category: "CPU", brand: "AMD", price: 283.00 },
     { componnentname: "Intel Core i5-12400F Tray CPU", category: "CPU", brand: "intel", price: 209.00 },

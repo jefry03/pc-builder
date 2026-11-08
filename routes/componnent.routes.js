@@ -20,7 +20,7 @@ const ramComponnents = allComponnents.filter((Componnent) => {
 });
 
 const storageComponnents = allComponnents.filter((Componnent) => {
-    return Componnent.category === "storage";
+    return Componnent.category === "Storage";
 });
 
 const powerSupplyComponnents = allComponnents.filter((Componnent) => {

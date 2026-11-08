@@ -5,16 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign In</title>
-     <link rel="stylesheet" href="/css/auth.css">
+     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <%- include('../partials/navbar') %>
-    <h1>Sign in</h1>
+  <div class="auth-page">
     <div class="auth-container">
+      <h1>welcome back</h1>
+      <p class="auth-desription"> sign in to continue bulding your dream pc</p>
     <form class="form "action="/auth/sign-in" method="POST">
       <div clas="input-container">
       <label for="username">Username:</label>
-      <input type="text" name="username" id="username" placeholde="enter username" required />
+      <input type="text" name="username" id="username" placeholde="enter your username" required />
     </div>
     <div class="input-container">
       <label for="password">Password:</label>

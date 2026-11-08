@@ -25,13 +25,16 @@
                     <select required name="components" id="cpu" required>
                         <option value="">--------</option>
                         <% cpuComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>" data-price="<%= component.price %>">
-                                <%= component.componnentname %> - 
-                                <%= component.price %> BHD
+                            <option value="<%= component._id %>" data-price="<%= component.price %>"
+                                data-image="<%= component.image %>">
+                                <%= component.componnentname %> -
+                                    <%= component.price %> BHD
                             </option>
 
                             <% }) %>
                     </select>
+                    <img id="cpu-image" class="component-image" alt="CPU Image" hidden></img>
+
                 </div>
 
                 <div class="pc-builds">
@@ -39,12 +42,14 @@
                     <select required name="components" id="gpu" required>
                         <option value="">--------</option>
                         <% gpuComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>" data-price="<%= component.price %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>"
+                                data-image="<%= component.image %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
                             <% }) %>
                     </select>
+                     <img id="gpu-image" class="component-image" alt="GPU Image" hidden></img>
                 </div>
 
                 <div class="pc-builds">
@@ -52,12 +57,14 @@
                     <select required name="components" id="ram" required>
                         <option value="">--------</option>
                         <% ramComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>" data-price="<%= component.price %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>"
+                                data-image="<%= component.image %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
                             <% }) %>
                     </select>
+                    <img id="RAM-image" class="component-image" alt="RAM Image" hidden></img>
                 </div>
 
                 <div class="pc-builds">
@@ -65,12 +72,14 @@
                     <select required name="components" id="motherboard" required>
                         <option value="">--------</option>
                         <% motherboardComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>" data-price="<%= component.price %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>"
+                                data-image="<%= component.image %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
                             <% }) %>
                     </select>
+                    <img id="motherboard-image" class="component-image" alt="motherboard Image" hidden></img>
                 </div>
 
                 <div class="pc-builds">
@@ -78,12 +87,14 @@
                     <select required name="components" id="case" required>
                         <option value="">--------</option>
                         <% caseComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>" data-price="<%= component.price %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>"
+                                data-image="<%= component.image %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
                             <% }) %>
                     </select>
+                    <img id="case-image" class="component-image" alt="case Image" hidden></img>
                 </div>
 
                 <div class="pc-builds">
@@ -91,12 +102,14 @@
                     <select required name="components" id="storage" required>
                         <option value="">--------</option>
                         <% storageComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>" data-price="<%= component.price %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>"
+                                data-image="<%= component.image %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
                             <% }) %>
                     </select>
+                    <img id="storage-image" class="storage-image" alt="storage Image" hidden></img>
                 </div>
 
                 <div class="pc-builds">
@@ -105,12 +118,14 @@
                         <option value="">--------</option>
 
                         <% powerSupplyComponents.forEach(component=> { %>
-                            <option value="<%= component._id %>" data-price="<%= component.price %>">
+                            <option value="<%= component._id %>" data-price="<%= component.price %>"
+                                data-image="<%= component.image %>">
                                 <%= component.componnentname %> - <%= component.price %> BHD
                             </option>
 
                             <% }) %>
                     </select>
+                    <img id="powersupply-image" class="component-image" alt="powersupply Image" hidden></img>
                 </div>
             </div>
             <div class="summery">
@@ -121,7 +136,7 @@
                 <button type="submit">Save Build</button>
             </div>
         </form>
-      <script src="/css/js/summary.js"></script>
+        <script src="/css/js/summary.js"></script>
 </body>
 
 </html>
