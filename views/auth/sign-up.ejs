@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up</title>
-  </head>
-     <link rel="stylesheet" href="/css/style.css">
-  <body>
-    <%- include('../partials/navbar') %>
-    <h1>Create a new account!</h1>
-      <div class="auth-container">
-    <form class="form-title" action="/auth/sign-up" method="post">
-       <div class="input-container">
-      <label for="username">Username:</label>
-      <input type="text" name="username" id="username" placeholder="Enter username" required/> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/css/sign-in.css">
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+
+  <div class="auth-page">
+    <div class="auth-container">
+      <h1>Create an Account</h1>
+      <p class="auth-description">Join us to start building your dream PC</p>
+      
+      <form class="form" action="/auth/sign-up" method="POST">
+        <div class="input-container">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="Enter username" required />
+        </div>
+        
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Enter password" required />
+        </div>
+        
+        <div class="input-container">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm password" required />
+        </div>
+        
+        <button type="submit" class="submit">Sign Up</button>
+        
+        <div class="signup-footer">
+          <span>Already have an account?</span>
+          <a href="/auth/sign-in">Sign in</a>
+        </div>
+      </form>
     </div>
-    <div class="input-container">
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password" placeholder="Enter password"
-          required /> </div>
-            <div class="input-container"></div>
-      <label for="confirmPassword">Confirm Password:</label>
-      <input type="password" name="confirmPassword" id="confirmPassword"    placeholder="Confirm password"
-          required />
-          </div>
-      <button type="submit" class="submit">Sign up</button>
-        <p class="signup-link">
-        Already have an account?
-        <a href="/auth/sign-in">Sign in</a>
-      </p>
-    </form>
   </div>
-  </body>
+</body>
 </html>

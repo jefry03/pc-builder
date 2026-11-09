@@ -11,7 +11,7 @@ async function seedComponnent() {
 
    const componnent = [
 
-    { componnentname: "Intel-Core-I3-13100-Desktop-Processor-4-Cores-4-5-GHz-LGA1700-Computer-CPU", category: "CPU", brand: "Intel", price: 389.99 , image: "https://www.cazasouq.com/product/intel-core-i3-13100f-cpu" },
+    { componnentname: "Intel-Core-I3-13100-Desktop-Processor-4-Cores-4-5-GHz-LGA1700-Computer-CPU", category: "CPU", brand: "Intel", price: 389.99 , image: "https://image.made-in-china.com/365f3j00afSbJQEtIBcT/Intel-Core-I3-13100-Desktop-Processor-4-Cores-4-5-GHz-LGA1700-Computer-CPU.webp" },
     { componnentname: "Intel Core I3-14100F CPU", category: "CPU", brand: "intel", price: 369.00 , image: "https://api.cazasouq.com/storage/v1/render/image/public/media-library/opencart/7dd072620a9a1d092ce7fb06258f40336706859d1016f01280b25bcf2a532e37.png?width=1024&quality=70&resize=contain" },
     { componnentname: "AMD Ryzen 5 8500g CPU", category: "CPU", brand: "AMD", price: 283.00 , image: "https://plecom.imgix.net/iil-373673-664864.jpg?fitfill&fill=solid&fill-color=00ffffff&bg-remove=true&bg-remove-semi-transparency=false&auto=format&w=1000&h=1000" },
     { componnentname: "Intel Core i5-12400F Tray CPU", category: "CPU", brand: "intel", price: 209.00 , image:"https://ttx.sa/UploadedFiles/ProductsPhotos/dca3359d-4652-4b4f-a79f-d280fabfe3a2.png" },

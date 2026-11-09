@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In</title>
-     <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-    <%- include('../partials/navbar') %>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="/css/sign-in.css">
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+
   <div class="auth-page">
     <div class="auth-container">
-      <h1>welcome back</h1>
-      <p class="auth-desription"> sign in to continue bulding your dream pc</p>
-    <form class="form "action="/auth/sign-in" method="POST">
-      <div clas="input-container">
-      <label for="username">Username:</label>
-      <input type="text" name="username" id="username" placeholde="enter your username" required />
+      <h1>Welcome Back</h1>
+      <p class="auth-description">Sign in to continue building your dream PC</p>
+      
+      <form class="form" action="/auth/sign-in" method="POST">
+        <div class="input-container">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="Enter your username" required />
+        </div>
+        
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Enter your password" required /> 
+        </div>
+        
+        <button type="submit" class="submit">Sign In</button>
+        
+        <div class="signup-footer">
+          <span>Don't have an account?</span>
+          <a href="/auth/sign-up">Sign up</a>
+        </div>
+      </form>
     </div>
-    <div class="input-container">
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password" placeholder="Enter password" required /> 
-    </div>
-      <button type="submit" class="submit">Sign in</button>
-      <p class="signup-link">no account ?</p>
-      <a href="/auth/sign-up">sign up</a>
-    </form>
   </div>
-  </body>
+</body>
 </html>
